@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "prisma:dev:deploy" :"prisma migrate deploy",
+    "prisma:dev:deploy": "prisma migrate deploy",
     "db:dev:rm": "docker-compose rm -fsv dev-db",
     "db:dev:up": "docker-compose up -d dev-db",
     "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up && sleep 1 && yarn prisma:dev:deploy",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "argon2": "^0.30.3",
